@@ -1,4 +1,4 @@
-# Linux Tweet App
+# Linux Facebook App
 
 This is very simple NGINX website that allows a user to send a tweet. 
 
