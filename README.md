@@ -1,6 +1,6 @@
 # Linux Facebook App
 
-Esta una página muy sencilla montada sobre un servidor NGINX que permite a los usuarios compartir una publicación en post.
+Esta una página muy sencilla montada sobre un servidor NGINX que permite a los usuarios compartir un post de facebook.
 
 Requisito tener Git y Docker instalado y tener una cuenta en [Docker Hub](https://hub.docker.com/)
 Si no tienes Git ni Docker instalados puedes utilizar [Docker for Beginners](https://training.play-with-docker.com/beginner-linux/)
@@ -47,10 +47,18 @@ Instrucciones:
  
  `docker container run --detach --publish 80:80 --name linux_fb_app --mount type=bind,source="$(pwd)",target=/usr/share/nginx/html $DOCKERID/linux_fb_app:1.0`
 
- cambiemos nuestra página por otra
+### Revisa que está bien desplegada tu página en:
+
+`localhost:80`
+
+### Cambiemos nuestra página por otra
 
  `cp index-new.html index.html`
 
- si estás en tu compus personal no olvides eliminar el contenedor para no tener un proceso corriendo
+### Revisa tu página para ver el cambio
+
+`localhost:80`
+
+### Si estás en tu compus personal no olvides eliminar el contenedor para no tener un proceso corriendo
 
  `docker container rm --force linux_fb_app`
